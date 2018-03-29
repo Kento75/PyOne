@@ -10,4 +10,4 @@ from django.contrib.auth.decorators import login_required
 class Index(View):
     @method_decorator(login_required)
     def get(self, request):
-        return render(request, 'accounts/index.html')
+        return render(request, 'accounts/home.html')
