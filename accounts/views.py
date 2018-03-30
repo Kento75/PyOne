@@ -16,5 +16,4 @@ from django.contrib.auth.decorators import login_required
 class Index(View):
     @method_decorator(login_required)
     def get(self, request):
-        username = request.POST
-        return render(request, 'accounts/home.html', username)
+        return render(request, 'home/home.html')
