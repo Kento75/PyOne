@@ -6,6 +6,7 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, Permis
 
 @python_2_unicode_compatible
 class AuthUserManager(BaseUserManager):
+
     def create_user(self, username, email, password, last_name, first_name):
         """
         ユーザ作成
@@ -103,3 +104,6 @@ class AuthUser(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.last_name + ' ' + self.first_name
+
+    class Meta:
+        db_table = 'dpt_master'
