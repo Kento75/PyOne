@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #'django.contrib.auth.backends.ModelBackend'                # アクセス認証カスタマイズ用
     'request.middleware.RequestMiddleware',                    # アクセスログ表示用ミドルウェア
 ]
 
