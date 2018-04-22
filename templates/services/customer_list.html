@@ -1,0 +1,44 @@
+{% extends 'home/home.html' %}
+{% block content %}
+  <h3>顧客一覧</h3>
+  <table class="table table-striped">
+    <thead>
+       <tr>
+          <th>会社コード</th>
+          <th>会社名</th>
+          <th>住所</th>
+          <th>電話番号</th>
+          <th>メールアドレス</th>
+          <th>#</th>
+       </tr>
+    </thead>
+    <tbody>
+      {% if object_list %}
+        {% for customer_data in object_list %}
+          <tr>
+            <td>{{ customer_data.company_code }}</td>
+            <td>{{ customer_data.company_name }}</td>
+            <td>{{ customer_data.address }}</td>
+            <td>{{ customer_data.phone_number }}</td>
+            <td>{{ customer_data.mail }}</td>
+            <td>
+              <a class="btn btn-primary" href="{% url 'services:edit' services.company_code %}">編集</a>
+            </td>
+          </tr>
+        {% endfor %}
+      {% endif %}
+    </tbody>
+  </table>
+  <ul class="pagination justify-content-center">
+    <li class="page-item">
+      {% if  page_obj.has_previous %}
+        <a class="page-link" href="?page={{ page_obj.previous_page_number }}">前のページ</a>
+      {% endif %}
+    </li>
+    <li class="page-item">
+      {% if  page_obj.has_next %}
+        <a class="page-link" href="?page={{ page_obj.next_page_number }}">次のページ</a>
+      {% endif %}
+    </li>
+  </ul>
+{% endblock %}

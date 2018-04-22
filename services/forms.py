@@ -1,4 +1,4 @@
-from django.forms import ModelForm, TextInput, NumberInput
+from django.forms import ModelForm, TextInput
 from services.models import CustomerMaster
 
 

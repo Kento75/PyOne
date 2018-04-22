@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'request',                     # アクセスログ表示
     'accounts',                    # ログイン管理
+    'services',                    # 顧客管理
 ]
 
 MIDDLEWARE = [

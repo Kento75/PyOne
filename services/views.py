@@ -7,7 +7,7 @@ from services.forms import CustomerForm
 class CustomerList(ListView):
     model = CustomerMaster
     template_name = "services/customer_list.html"
-    paginate_by = 10
+    paginate_by = 10  # 1ページあたりに表示する件数
 
 
 class CustomerCreate(CreateView):
