@@ -13,12 +13,12 @@ class CustomerList(ListView):
 class CustomerCreate(CreateView):
     model = CustomerMaster
     form_class = CustomerForm
-    template_name = 'services/customer_create.html'
-    success_url = reverse_lazy('services:principal')
+    template_name = 'services/customer_add.html'
+    success_url = reverse_lazy('services:customer_list')
 
 
 class CustomerUpdate(UpdateView):
     model = CustomerMaster
     form_class = CustomerForm
     template_name = 'services/customer_update.html'
-    success_url = reverse_lazy('services:principal')
+    success_url = reverse_lazy('services:customer_list')
