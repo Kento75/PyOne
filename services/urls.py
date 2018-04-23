@@ -1,10 +1,13 @@
 from django.urls import path
+from accounts.models import AuthUser
 from services.views import CustomerList, CustomerCreate, CustomerUpdate
+from django.contrib.auth.decorators import login_required
+
 
 app_name = 'services'
 
 urlpatterns = [
-    path('list/', CustomerList.as_view(), name="customer"),
-    path('clear/', CustomerCreate.as_view(), name="clear"),
-    path('edit/<customer_code>/', CustomerUpdate.as_view(), name='edit'),
+    path('list/', login_required(CustomerList.as_view()), name='customer'),
+    path('clear/', login_required(CustomerCreate.as_view()), name='clear'),
+#    path('edit/<customer_code>/', CustomerUpdate.as_view(model = AuthUser), name='edit'),
 ]
