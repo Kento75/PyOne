@@ -9,8 +9,8 @@
           <th>住所</th>
           <th>電話番号</th>
           <th>メールアドレス</th>
-<!--          <th>#</th>
--->       </tr>
+          <th>#</th>
+       </tr>
     </thead>
     <tbody>
       {% if object_list %}
@@ -21,10 +21,10 @@
             <td>{{ customer_data.address }}</td>
             <td>{{ customer_data.phone_number }}</td>
             <td>{{ customer_data.mail }}</td>
-<!--            <td>
-              <a class="btn btn-primary" href="{% url 'services:edit' services.company_code %}">編集</a>
+            <td>
+              <a class="btn btn-primary" href="{% url 'services:customer_edit' pk=customer_data.pk %}">編集</a>
             </td>
--->          </tr>
+          </tr>
         {% endfor %}
       {% endif %}
     </tbody>

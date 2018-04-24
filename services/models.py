@@ -11,3 +11,6 @@ class CustomerMaster(models.Model):
 
     class Meta:
         db_table = 'customer_master'
+
+    def __str__(self):
+        return self.customer_code
