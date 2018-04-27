@@ -1,7 +1,7 @@
 {% extends 'home/home.html' %}
 {% block content %}
   <div class="container">
-    <h3>更新</h3>
+    <h3>編集画面</h3>
     <form method="post">
       {% csrf_token %}
       {{ form.as_p }}

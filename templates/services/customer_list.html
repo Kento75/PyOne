@@ -2,8 +2,10 @@
 {% block content %}
   <h3 style ="display: inline">顧客一覧</h3>
   &nbsp;&nbsp;&nbsp;
-  <a class="btn btn-primary" href="{% url 'services:customer_add' %}">追加</a>
-  <br><br><br>
+  <div align="right" style="margin-right:50px">
+    <a class="btn btn-primary" href="{% url 'services:customer_add' %}">追加</a>
+  </div>
+  <br><br>
   <table class="table table-striped">
     <thead>
        <tr>
@@ -12,7 +14,7 @@
           <th>住所</th>
           <th>電話番号</th>
           <th>メールアドレス</th>
-          <th>#</th>
+          <th></th>
        </tr>
     </thead>
     <tbody>
