@@ -4,6 +4,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 
 
+# 利用者マスタ
 @python_2_unicode_compatible
 class AuthUserManager(BaseUserManager):
 

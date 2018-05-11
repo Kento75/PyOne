@@ -2,6 +2,7 @@ from django.forms import ModelForm, TextInput
 from services.models import CustomerMaster
 
 
+# 顧客管理フォーム
 class CustomerForm(ModelForm):
     class Meta:
         model = CustomerMaster
