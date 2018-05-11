@@ -1,5 +1,4 @@
 from django.urls import path
-from accounts.models import AuthUser
 from services.views import CustomerList, CustomerAdd, CustomerEdit
 from django.contrib.auth.decorators import login_required
 

@@ -40,6 +40,9 @@
               {{ request.user }}
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="{% url 'accounts:password_change' %}">パスワード変更</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="{% url 'accounts:logout' %}">ログアウト</a>
             </li>
           </ul>
