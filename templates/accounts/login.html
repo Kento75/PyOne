@@ -5,15 +5,15 @@
       <div class="col"></div>
       <div class="col">
         <br>
-        <h2>ログインフォーム</h2>
+        <h2>ログインフォーム</h2><br>
         <form action="/accounts/login/" method="post">
           {% csrf_token %}
           {% if next %}
             <input type="hidden" name="next" value="{{ next }}" />
           {% endif %}
-          <p>ユーザID  ：<input type="text" name="username" placeholder="ユーザID"></p>
+          <p>ユーザID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;：<input type="text" name="username" placeholder="ユーザID"></p>
           <p>パスワード ：<input type="password" name="password" placeholder="パスワード"></p>
-          <p><button type="submit" class="btn btn-success btn-block">ログイン</button></p>
+          <p><button type="submit" class="btn btn-info btn-block">ログイン</button></p>
         </form>
       </div>
       <div class="col">
