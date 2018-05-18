@@ -7,7 +7,7 @@ from services.forms import CustomerForm
 # 【顧客管理】リスト一覧画面
 class CustomerList(ListView):
     model = CustomerMaster
-    template_name = "services/customer_list.html"
+    template_name = "services/customer/customer_list.html"
     paginate_by = 10  # 1ページあたりに表示する件数
 
 
@@ -15,7 +15,7 @@ class CustomerList(ListView):
 class CustomerAdd(CreateView):
     model = CustomerMaster
     form_class = CustomerForm
-    template_name = 'services/customer_add.html'
+    template_name = 'services/customer/customer_add.html'
     success_url = reverse_lazy('services:customer_list')
 
 
@@ -23,5 +23,5 @@ class CustomerAdd(CreateView):
 class CustomerEdit(UpdateView):
     model = CustomerMaster
     form_class = CustomerForm
-    template_name = 'services/customer_edit.html'
+    template_name = 'services/customer/customer_edit.html'
     success_url = reverse_lazy('services:customer_list')
