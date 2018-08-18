@@ -1,3 +1,9 @@
 {% extends 'common/application_base.html' %}
+{% load static %} {# テンプレート継承後にstaticのロードがイケてない #}
 {% block content %}
+ <div class="container">
+    <h1>HOME画面</h1>
+    <div>Djangoで作るCRMアプリケーション</div>
+    <img src="{% static 'img/home.png' %}" alt="home page image">
+  </div>
 {% endblock %}

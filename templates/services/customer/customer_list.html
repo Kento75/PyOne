@@ -29,6 +29,9 @@
             <td>
               <a class="btn btn-primary" href="{% url 'services:customer_edit' pk=customer_data.pk %}">編集</a>
             </td>
+            <td>
+              <a class="btn btn-primary" href="{% url 'services:customer_delete' pk=customer_data.customer_code %}">削除</a>
+            </td>
           </tr>
         {% endfor %}
       {% endif %}
